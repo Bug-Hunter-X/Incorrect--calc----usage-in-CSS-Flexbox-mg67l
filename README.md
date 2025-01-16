@@ -1,0 +1,2 @@
+# Incorrect `calc()` Usage in CSS Flexbox
+This repository demonstrates a common error when using the `calc()` function within CSS, specifically within a flexbox context. The issue arises from misinterpreting the calculation's reference point. In flexbox, `100%` within `calc()` doesn't always refer to the final available space after flexbox distribution.
