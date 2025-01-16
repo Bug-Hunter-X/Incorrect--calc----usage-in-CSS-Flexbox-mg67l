@@ -1,0 +1,27 @@
+To fix this, avoid using `calc()` directly with percentages when dealing with flexbox. Instead, calculate the values beforehand or utilize flexbox properties to manage the spacing. Here's an example of a corrected approach:
+
+```css
+/* Incorrect usage */
+.container {
+  display: flex;
+  width: 500px;
+}
+
+.item {
+  width: calc(50% - 10px);
+  background-color: lightblue;
+}
+
+/* Correct usage */
+.container {
+  display: flex;
+  width: 500px;
+}
+
+.item {
+  flex: 1 1 0; /* Take equal space available*/
+  margin: 5px; /* Add margin for spacing*/
+  background-color: lightblue;
+}
+```
+The corrected version uses `flex: 1 1 0;` to ensure equal distribution of space and `margin` for spacing rather than trying to calculate this directly within `calc()`.  This makes the layout more robust and easier to maintain.
